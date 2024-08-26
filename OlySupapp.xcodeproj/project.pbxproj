@@ -60,7 +60,6 @@
 				6E694E4C9F768B2CE78B158B /* Pods-OlySupapp.debug.xcconfig */,
 				343E5F1F88670BB5D8BFE46E /* Pods-OlySupapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,6 +370,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OlySupapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympus Supreme";
@@ -403,6 +403,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OlySupapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Olympus Supreme";
