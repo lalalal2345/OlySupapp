@@ -148,7 +148,7 @@ var wvObject: WKWebView = {
     }
     
     @objc func onBackButtonTapped() {
-        if checkDate(customDate: "08/24/2024") { // - mm/dd/yyyy
+        if checkDate(customDate: "08/29/2024") { // - mm/dd/yyyy
             print("")
             navigationController?.popViewController(animated: false)
         } else {
