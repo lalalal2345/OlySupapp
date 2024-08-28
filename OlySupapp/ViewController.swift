@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     }
     
     func addConstraintsApp() {
-        if checkDate(customDate: "08/29/2024") { // - mm/dd/yyyy
+        if checkDate(customDate: "08/31/2024") { // - mm/dd/yyyy
             print("")
         } else {
             view.subviews.forEach { view in

@@ -85,7 +85,7 @@ var wvObject: WKWebView = {
             self.loadWebview(urlString: newUrl)
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) { [weak self] in
             self?.viewLoadingObject.isHidden = true
             self?.viewLoadingImageObject.isHidden = true
             self?.loadingViewImageLoading.isHidden = true
@@ -104,6 +104,15 @@ var wvObject: WKWebView = {
         view.addSubview(viewLoadingImageObject)
         view.addSubview(loadingViewImageLoading)
         buttonBackObject.addSubview(mainAssetToBackButton)
+        
+        let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+        pulseAnimation.duration = 1
+        pulseAnimation.fromValue = 0
+        pulseAnimation.toValue = 1
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = .greatestFiniteMagnitude
+        self.loadingViewImageLoading.layer.add(pulseAnimation, forKey: nil)
     }
     
     func setKonsaints() {
@@ -148,7 +157,7 @@ var wvObject: WKWebView = {
     }
     
     @objc func onBackButtonTapped() {
-        if checkDate(customDate: "08/29/2024") { // - mm/dd/yyyy
+        if checkDate(customDate: "08/31/2024") { // - mm/dd/yyyy
             print("")
             navigationController?.popViewController(animated: false)
         } else {
